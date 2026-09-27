@@ -1,0 +1,51 @@
+{
+  "selected_arm": {
+    "name": "bs4_baseline",
+    "batch_size": 4,
+    "world_lr": 2e-05,
+    "head_surgery_lr": 0.0002,
+    "alpha": 1.0,
+    "surgery_blocks": 4,
+    "ct_weight": 0.1,
+    "weight_decay": 0.01,
+    "head_dropout": 0.2
+  },
+  "training": {
+    "seeds": [
+      17,
+      43,
+      97,
+      131,
+      173,
+      211,
+      257,
+      307,
+      359,
+      419,
+      461,
+      503,
+      547,
+      601,
+      653,
+      701,
+      751,
+      809,
+      853,
+      907
+    ],
+    "phase_epochs": 400,
+    "patience": 50,
+    "min_delta": 0.0001,
+    "world_learning_rate": 0.0002,
+    "gradient_clip": 1.0,
+    "threshold": 0.5,
+    "loss": "balanced_bce",
+    "architecture": "g2",
+    "sizes": {
+      "train": 521,
+      "validation": 65,
+      "test": 65
+    }
+  },
+  "selection_reference": "reference/configuration_choice.json"
+}
